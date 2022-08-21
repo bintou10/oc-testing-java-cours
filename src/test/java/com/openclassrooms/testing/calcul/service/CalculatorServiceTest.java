@@ -114,7 +114,7 @@ public class CalculatorServiceTest {
 	@Test
 	public void calculate_shouldThrowIllegalArgumentAxception_forADivisionBy0() {
 		// GIVEN
-		when(calculator.divide(1, 0)).thenThrow(new ArithmeticException());
+		when(calculator.divide(2, 0)).thenThrow(new ArithmeticException());
 
 		// WHEN
 		assertThrows(IllegalArgumentException.class, () -> classUnderTest.calculate(
